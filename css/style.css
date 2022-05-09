@@ -1,0 +1,31 @@
+.hero{
+    background: rgb(179,227,218);
+    background: linear-gradient(90deg, rgba(179,227,218,1) 0%, rgba(55,162,134,1) 61%);
+    padding: 50px;
+}
+
+
+.title{
+    color:white;
+}
+
+#main-content{
+    padding: 5vh 0 0 0; 
+}
+
+.search-section{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#right-section{
+    padding-left: 3vw;
+}
+
+.search-section form input{
+    min-width: 100%;
+}
+
+h2{
+    font-size:large;
+}

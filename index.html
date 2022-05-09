@@ -4,46 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
     <title>Weather Dashboard</title>
 </head>
-<body class="flex-column">
-    <header class="hero">
-        <h1 class="app-title"> Weather Dashboard </h1>
+
+<body>
+    <header class="hero is-large">
+        <div class="hero-head is-center">
+            <div class="container is-center">
+                <h1 class="title is-center"> Sweater Weather </h1>
+            </div>
+        </div>
     </header>
 
-    <main class="flex-row justify-space-between">
-        <!--Left Column Search-->
-        <div class="col-12 col-md-4">
-            <div class="card">
-                <h3 class="card-header"> Search For A City</h3>
-                <form id="user-form" class="card-body">
-                    <label class="form-label" for="city">  </label>
-                    <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
-                    <button type="submit" class="btn"> Search </button>
-                </form>
-            </div>
+    <main class="container" id="main-content">
+        <div class="columns">
+            <!--Left Column Search Section-->
+            <div class="column is-3 search-section">
+                <section class="search-form">
+                    <h2> Search For A City</h2>
+                    <form id="user-form" class="card-body is-fullwidth">
+                        <input name="city" placeholder="Enter a City Name" id="city" type="text" autofocus="true" class="is-fullwidth form-input"/>
+                        <button type="submit" class="button is-fullwidth is-link is-light"> Search </button>
+                    </form>
+                </section>
+                    <!--Search History Results-->
+                <div class="table-container">
+                    <table id="historyList" class="is-bordered">
+                        <tr></tr>
+                    </table>
+                </div>
+            </div>  
+            <!--End of Search Section-->
 
-            <div class="card">
-                <!--Search History Cities-->
+            <!--Right Column with API Results-->
+
+            <div class="column is-9" id="right-section">
+                <!--Today Weather-->
+                <div id="top-card" class="card container">
+                    <h1 class="city-name"> CITY </h1>
+                    <h5 class="temp"></h5>
+                    <h5 class="wind"></h5>
+                    <h5 class="humidity"></h5>
+                    <h5 class="uv-index"></h5>
+                </div>
+                <!--End Of Today Weather-->
+            
+
+                <!--Five Days Weather-->
+                <div id="bottom-cards" class="card container">
+                    <h2> 5-Day Forecast: </h2>
+                    <section class="columns">
+                        <div id="day-1" class="column is-one-fifth card-content"> 
+                            <h3 id="date-1" class="has-text-white"></h3>
+                            <span id="icon1"></span>
+                            <h5 id="temp1"></h5>
+                            <h5 id="wind1"></h5>
+                            <h5 id="humid1"></h5>
+                        </div>
+                        <div id="day-2" class="column is-one-fifth">
+                            <h3 id="date-2" class="has-text-white"></h3>
+                            <span id="icon2"></span>
+                            <h5 id="temp2"></h5>
+                            <h5 id="wind2"></h5>
+                            <h5 id="humid2"></h5>
+                        </div>
+                        <div id="day-3" class="column is-one-fifth"> 
+                            <h3 id="date-3" class="has-text-white"></h3>
+                            <span id="icon3"></span>
+                            <h5 id="temp3"></h5>
+                            <h5 id="wind3"></h5>
+                            <h5 id="humid3"></h5>
+                        </div>
+                        <div id="day-4" class="column is-one-fifth"> 
+                            <h3 id="date-4" class="has-text-white"></h3>
+                            <span id="icon4"></span>
+                            <h5 id="temp4"></h5>
+                            <h5 id="wind4"></h5>
+                            <h5 id="humid4"></h5>
+                        </div>
+                        <div id="day-5" class="column is-one-fifth"> 
+                            <h3 id="date-5" class="has-text-white"></h3>
+                            <span id="icon5"></span>
+                            <h5 id="temp5"></h5>
+                            <h5 id="wind5"></h5>
+                            <h5 id="humid5"></h5>
+                        </div>
+                    </section>
+
+                </div>
+                <!-- End of Five Days Weather-->
+
             </div>
+            <!--End of Column with API Results-->
         </div>
 
-        <!--Right Column-->
-        <div class="col-12 col-md-8">
-            <div id="top-card">
-                <h2 class="city-name"></h2>
-                <div id="weather-info" class="list-group"></div>
-            </div>
-            
-            <div id="bottom-card">
-                <h5 class="forecast"></h5>
-
-            </div>
-            
-        </div>
     </main>
-    <script src="./script.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+  ></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

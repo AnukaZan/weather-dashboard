@@ -26,6 +26,29 @@
     min-width: 100%;
 }
 
+h1, h2, h3, h5{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: x-large;
+}
+
 h2{
-    font-size:large;
+    font-size: large;
+}
+
+h5{
+    font-style: bold;
+    font-weight: 600;
+}
+
+.card-content{
+    background-color: rgba(55,162,134,1);
+    margin: 0.5vw;
+    display:flex;
+}
+
+.card{
+    padding: 2vh;
 }

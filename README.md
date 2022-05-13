@@ -1,4 +1,4 @@
-#Weather Dashboard ("Sweater Weather"
+## Weather Dashboard ("Sweater Weather")
 
 ## Features Include:
 * current and 5-day future conditions for searched city
@@ -21,4 +21,4 @@
 https://anukazan.github.io/weather-dashboard/
 
 ## Sample Image of Website below
-![Sample Website](image.PNG)
+![Sample Website](image.JPG)

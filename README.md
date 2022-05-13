@@ -21,4 +21,4 @@
 https://anukazan.github.io/weather-dashboard/
 
 ## Sample Image of Website below
-![Sample Website](image.JPG)
+![Sample Website](weather-dashboard/image.jpg)

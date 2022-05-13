@@ -28,10 +28,12 @@
 
 h1, h2, h3, h5{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
 
 h1{
     font-size: x-large;
+    font-style: oblique;
 }
 
 h2{
@@ -40,15 +42,45 @@ h2{
 
 h5{
     font-style: bold;
-    font-weight: 600;
+   
 }
+
 
 .card-content{
     background-color: rgba(55,162,134,1);
     margin: 0.5vw;
-    display:flex;
+    display:block;
+    flex-wrap: wrap;
+    color:white;
 }
 
 .card{
     padding: 2vh;
+}
+
+.flex{
+    display:flex;
+    align-items:flex-end;
+}
+
+#today-date{
+    padding-left:5px;
+}
+
+.success{
+    background-color: rgba(55,162,134,1);
+    color: white;
+    padding: 0 1vw;
+}
+
+.warning{
+    background-color: tan;
+    color: white;
+    padding: 0 1vw;
+}
+
+.danger{
+    background-color:red;
+    color: white;
+    padding: 0 1vw;
 }
